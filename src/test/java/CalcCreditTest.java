@@ -13,7 +13,7 @@ public class CalcCreditTest {
         int loanSum = 1_000_000;
         double interestRate = 20;
         int creditPeriod = 60;
-        double actualResult = calcCredit.calcOfMounthlyPayment(loanSum, interestRate, calcCredit);
+        double actualResult = calcCredit.calcOfMounthlyPayment(loanSum, interestRate, creditPeriod);
         double expectedResult = (loanSum + loanSum * (interestRate / 100)) / creditPeriod;
         Assert.assertTrue("Неверная сумма ежемесячного платежа при проценте " + interestRate
                         + " от суммы кредита " + loanSum + ", на срок " + creditPeriod + " месяцев. "
